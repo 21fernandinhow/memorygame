@@ -1,0 +1,81 @@
+.container, .game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fffafa;
+  border-radius: 20px;
+  border: 3px outset grey;
+  width: 50%;
+  text-align: center;
+}
+#header h1 {
+  font-size: 2.5rem;
+}
+#header .stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#header #result {
+  font-size: 1.5rem;
+  color: #fffafa;
+}
+
+.game {
+  flex-direction: column;
+}
+.game .card-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 8vw);
+  grid-gap: 10px;
+  width: 50%;
+}
+.game .card-grid .card {
+  border-radius: 10px;
+  border: 8px solid #f5f5f5;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/5730/5730444.png");
+  background-color: #fffafa;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.game .card-grid .card:hover {
+  border-color: #556b2f;
+  transition: 0.5s;
+}
+.game #start {
+  margin-top: 20px;
+  padding: 15px 30px;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  font-weight: bold;
+  border: 2px solid #556b2f;
+}
+.game #start:hover {
+  padding: 15px 40px;
+  background-color: #fffafa;
+  transition: 0.2s;
+}
+
+@media (max-width: 780px) {
+  #header {
+    width: 80%;
+  }
+  #header h1 {
+    font-size: 2rem;
+  }
+  .game .card-grid {
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 18vw);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
