@@ -9,62 +9,62 @@ function App() {
   const cards = [
     {
         name: "Leão",
-        img: "https://cdn-icons-png.flaticon.com/512/4081/4081551.png",
+        img: "../../images/lion.webp",
         id: ""
     },
     {
         name: "Elefante",
-        img: "https://cdn-icons-png.flaticon.com/512/3969/3969722.png",
+        img: "../../images/elephant.webp",
         id: ""
     },
     {
         name: "Macaco",
-        img: "https://cdn-icons-png.flaticon.com/512/194/194199.png",
+        img: "../../images/monkey.webp",
         id: ""
     },
     {
         name: "Girafa",
-        img: "https://cdn-icons-png.flaticon.com/512/3835/3835709.png",
+        img: "../../images/giraffe.webp",
         id: ""
     },
     {
         name: "Hipopotamo",
-        img: "https://cdn-icons-png.flaticon.com/512/1970/1970616.png",
+        img: "../../images/hipo.webp",
         id: ""
     },
     {
         name: "Cobra",
-        img: "https://cdn-icons-png.flaticon.com/512/434/434541.png",
+        img: "../../images/snake.webp",
         id: ""
     },
     {
         name: "Leão",
-        img: "https://cdn-icons-png.flaticon.com/512/4081/4081551.png",
+        img: "../../images/lion.webp",
         id: ""
     },
     {
         name: "Elefante",
-        img: "https://cdn-icons-png.flaticon.com/512/3969/3969722.png",
+        img: "../../images/elephant.webp",
         id: ""
     },
     {
         name: "Macaco",
-        img: "https://cdn-icons-png.flaticon.com/512/194/194199.png",
+        img: "../../images/monkey.webp",
         id: ""
     },
     {
         name: "Girafa",
-        img: "https://cdn-icons-png.flaticon.com/512/3835/3835709.png",
+        img: "../../images/giraffe.webp",
         id: ""
     },
     {
         name: "Hipopotamo",
-        img: "https://cdn-icons-png.flaticon.com/512/1970/1970616.png",
+        img: "../../images/hipo.webp",
         id: ""
     },
     {
         name: "Cobra",
-        img: "https://cdn-icons-png.flaticon.com/512/434/434541.png",
+        img: "../../images/snake.webp",
         id: ""
     }
   ];
@@ -92,11 +92,15 @@ function App() {
           let quickShowCard = document.getElementById(i);
           let quickCardData = playingCards[quickShowCard.id];
           quickShowCard.style.backgroundImage = "url("+quickCardData.img+")";
+          quickShowCard.style.backgroundColor = "#E6E5A3";
+          quickShowCard.style.borderColor = "#E6E5A3";
       };
       setTimeout(()=>{
           for (let i=0;i<playingCards.length;i++){
               let quickHideCard = document.getElementById(i);
-              quickHideCard.style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/512/5730/5730444.png')";
+              quickHideCard.style.backgroundImage = "none";
+              quickHideCard.style.backgroundColor = "#A9AF7E";
+              quickHideCard.style.borderColor = "#7D8F69";
           };
       },1500);
   };
@@ -106,6 +110,8 @@ function App() {
       let cardData = playingCards[cardElement.id];
       cardData.id = cardElement.id;
       cardElement.style.backgroundImage = "url("+cardData.img+")";
+      cardElement.style.backgroundColor = "#E6E5A3";
+      cardElement.style.borderColor = "#E6E5A3";
       //console.log(cardData);
       selectedCards.push(cardData);
       checkResult();
@@ -121,8 +127,12 @@ function App() {
               setCardsToWin(cardsToWin = cardsToWin-2);
           } else {
               setTimeout(()=>{
-                document.getElementById(selectedCards[0].id).style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/512/5730/5730444.png')";
-                document.getElementById(selectedCards[1].id).style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/512/5730/5730444.png')";
+                document.getElementById(selectedCards[0].id).style.backgroundImage = "none";
+                document.getElementById(selectedCards[0].id).style.backgroundColor = "#A9AF7E";
+                document.getElementById(selectedCards[0].id).style.borderColor = "#7D8F69";
+                document.getElementById(selectedCards[1].id).style.backgroundImage = "none";
+                document.getElementById(selectedCards[1].id).style.backgroundColor = "#A9AF7E";
+                document.getElementById(selectedCards[1].id).style.borderColor = "#7D8F69";
                 selectedCards.pop();
                 selectedCards.pop();
               },500);
