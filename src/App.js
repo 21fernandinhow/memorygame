@@ -102,7 +102,7 @@ function App() {
               quickHideCard.style.backgroundColor = "#A9AF7E";
               quickHideCard.style.borderColor = "#7D8F69";
           };
-      },1500);
+      },2000);
   };
 
   const handleCard = (event) => {
