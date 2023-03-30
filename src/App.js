@@ -146,7 +146,7 @@ function App() {
     const result = document.getElementById("result");
     const header = document.getElementById("header");
     if(life === 0){
-      result.innerHTML = "Você perdeu!"
+      result.innerHTML = "Você perdeu! <button class='restart' onClick='window.location.reload(true)'>Reiniciar</button>"
       header.style.transition = "0.4s";
       header.style.backgroundColor = "#e4605e";
       header.style.color = "white";
@@ -155,7 +155,7 @@ function App() {
         document.getElementById(i).removeEventListener("click", handleCard);;
       };
     } else if (cardsToWin === 0){
-      result.innerHTML = "Você venceu!"
+      result.innerHTML = "Você venceu! <button class='restart' onClick='window.location.reload(true)'>Reiniciar</button>"
       header.style.transition = "0.4s";
       header.style.backgroundColor = "#469536";
       header.style.color = "white";

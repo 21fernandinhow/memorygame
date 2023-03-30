@@ -27,8 +27,21 @@
         align-items: center;
     }
     #result{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: #fffafa;
+        .restart{
+            font-size: 1.3rem;
+            color: #fffafa;
+            transform: translateX(-3px);
+            border: none;
+            background: none;
+            border-bottom: 2px solid #E6E5A3;
+            cursor: pointer;
+            opacity: 0.7;
+            &:hover{
+                opacity: 1;
+            }
+        }
     }
 }
 
