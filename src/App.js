@@ -70,7 +70,7 @@ function App() {
   ];
   const playingCards = [];
   const selectedCards = [];
-  let [life, setLife] = useState(5);
+  let [life, setLife] = useState(3);
   let [cardsToWin, setCardsToWin] = useState(cards.length);
 
   //Functions and Game Logic
